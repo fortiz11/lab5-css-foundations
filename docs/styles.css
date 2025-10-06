@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+input, button { font: inherit; }
+
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1d4ed8;
+    --panel-blue-1: #4ea1ff; 
+  --bg: #f5f7fb;           
+  --white: #ffffff;
+  --text-900: #1f2937;    
+  --text-700: #374151;
+  --text-500: #6b7280;
+  --border: #e5e7eb;
+  --shadow: rgba(16, 24, 40, 0.08);
+  --shadow-strong: rgba(16, 24, 40, 0.12);
+
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, "Noto Sans";
+  --fs-100: 0.75rem;
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-550: 1.5rem;
+  --fs-700: clamp(1.75rem, 2.2vw + 1rem, 2.25rem);
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --radius-lg: 0.875rem;
+  --radius-md: 0.625rem;
+
+  --transition: 180ms ease;
+  --ring: 0 0 0 4px rgba(37, 99, 235, 0.18);
+}
+
+
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text-900);
+    background: var(--bg);
+    display: grid;
+    place-items: start center;
+    padding: 6vh 1rem;
+  }
+
+  .layout {
+    width: min(980px, 100%);
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow), 0 2px 6px var(--shadow-strong);
+  }
+  
+@media (max-width: 860px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+  }
+    .brand-panel {
+        background: linear-gradient(
+          135deg,
+          var(--brand-600) 0%,
+          var(--brand-700) 60%,
+          var(--panel-blue-1) 120%
+        );
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        padding: clamp(var(--space-8), 7vh, var(--space-10));
+      }
+
+      .brand-panel__inner {
+        max-width: 28rem;
+      }
+
+      .brand-title {
+        font-size: var(--fs-700);
+        line-height: 1.1;
+        margin: 0 0 var(--space-3) 0;
+        letter-spacing: -0.01em;
+        font-weight: 800;
+      }
+      .brand-subtitle {
+        margin: 0;
+        font-size: var(--fs-300);
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .brand-subtitle em {
+        font-style: italic;
+      }
+      
+
+      .auth-panel {
+        padding: clamp(var(--space-8), 6vh, var(--space-10));
+        display: grid;
+        grid-template-rows: auto 1fr;
+      }
+      
+      .auth-card {
+        width: 100%;
+        max-width: 520px;
+      }
+      
