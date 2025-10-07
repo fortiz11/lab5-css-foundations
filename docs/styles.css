@@ -27,9 +27,8 @@ button {
 }
 
 :root {
-    --brand-600: #3b82f6; 
-    --brand-700: #1d4ed8;
-    --panel-blue-1: #60a5fa;
+  --brand-600: #3b82f6;
+  --brand-700: #1d4ed8;
   --bg: #f5f7fb;
   --white: #ffffff;
   --text-900: #1f2937;
@@ -46,7 +45,7 @@ button {
   --fs-300: 1rem;
   --fs-400: 1.125rem;
   --fs-550: 1.5rem;
-  --fs-700: clamp(1.75rem, 2.2vw + 1rem, 2.25rem);
+  --fs-700: clamp(2.2rem, 2.6vw + 1rem, 2.6rem);
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
@@ -60,6 +59,19 @@ button {
   --transition: 180ms ease;
   --ring: 0 0 0 4px rgba(37, 99, 235, 0.18);
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
 
 body {
   font-family: var(--font-sans);
@@ -86,15 +98,15 @@ body {
   }
 }
 .brand-panel {
-    background: linear-gradient(135deg, #5fabf6 10%, #1f77e9 70%, #4079e9 110%);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    padding: clamp(var(--space-8), 7vh, var(--space-10));
-  }
+  background: linear-gradient(135deg, #5fabf6 10%, #1f77e9 70%, #4079e9 110%);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  padding: clamp(2rem, 8vh, 3rem) 2.25rem;;
+}
 
 .brand-panel__inner {
-  max-width: 28rem;
+  max-width: 32rem;
 }
 
 .brand-title {
@@ -111,6 +123,7 @@ body {
 }
 .brand-subtitle em {
   font-style: italic;
+  font-weight: 700;
 }
 
 .auth-panel {
@@ -142,7 +155,7 @@ label {
 input[type="email"],
 input[type="password"] {
   width: 100%;
-  padding: 0.7rem 0.9rem;
+  padding: 0.85rem 1rem;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   font-size: var(--fs-300);
@@ -184,6 +197,9 @@ input:focus-visible {
     box-shadow var(--transition), opacity var(--transition);
 }
 .btn--primary {
+    padding: 0.75rem 1.25rem;  
+    font-size: 0.95rem;        
+    border-radius: 0.25rem;  
   color: #fff;
   background: var(--brand-600);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
@@ -208,16 +224,22 @@ input:focus-visible {
   text-decoration: underline;
 }
 .link--subtle {
-    color: var(--brand-600);
-    font-weight: 500;
-  }
-  .link--subtle:hover {
-    color: var(--brand-700);
-    text-decoration: underline;
-  }
+  color: var(--brand-600);
+  font-weight: 500;
+}
+.link--subtle:hover {
+  color: var(--brand-700);
+  text-decoration: underline;
+}
 
 @media (max-width: 860px) {
-    .brand-panel { padding-block: var(--space-8); }
-    .auth-panel  { padding-block: var(--space-8); }
-    .auth-card   { max-width: 600px; }
+  .brand-panel {
+    padding-block: var(--space-8);
+  }
+  .auth-panel {
+    padding-block: var(--space-8);
+  }
+  .auth-card {
+    max-width: 560px;
+  }
 }
