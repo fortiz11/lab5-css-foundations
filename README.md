@@ -53,6 +53,7 @@ Safari Check ![here](docs/Safari.png)
 | Accessibility warning in validator | Added a visually hidden heading inside the form section for screen readers |
 | Size mismatch in text and button proportions | Tuned `font-size` and `padding` values for `.brand-subtitle`, `input`, and `.btn` |
 
-
+## Publishing 
+Find my login page [Here!](https://fortiz11.github.io/lab5-css-foundations/)
 ## License
 This project is licensed under the MIT License - see [LICENSE.md](LICENSE.md)
