@@ -86,17 +86,12 @@ body {
   }
 }
 .brand-panel {
-  background: linear-gradient(
-    135deg,
-    var(--brand-600) 0%,
-    var(--brand-700) 60%,
-    var(--panel-blue-1) 120%
-  );
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  padding: clamp(var(--space-8), 7vh, var(--space-10));
-}
+    background: linear-gradient(135deg, #5fabf6 10%, #1f77e9 70%, #4079e9 110%);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: clamp(var(--space-8), 7vh, var(--space-10));
+  }
 
 .brand-panel__inner {
   max-width: 28rem;
